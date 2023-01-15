@@ -2,8 +2,9 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package Teste;
+package Pt_02;
 import Metodos_Ordenacao.Metodos;
+import java.util.concurrent.TimeUnit;
 
 /**
  *
@@ -11,7 +12,7 @@ import Metodos_Ordenacao.Metodos;
  */
 public class Teste {
     public static void main (String[] args){
-        int [] vet  = new int [100000];
+        int []vet = new int [1000000];
         
         for (int i=0; i < vet.length; i++){
             vet[i] = (int) (Math.random() * vet.length);
@@ -27,11 +28,11 @@ public class Teste {
         
         
         
-        // Ordenado
+        //Ordenado
         //System.out.println("\n -------- Vetor ordenado-------\n");
         //Captura o tempo inicial
         long tempoInicial = System.currentTimeMillis();
-        Metodos.bubbleSort(vet);
+        Metodos.mergeSort(vet);
         //Captura o tempo final
         long tempoFinal = System.currentTimeMillis();
         //Diferença
@@ -42,6 +43,7 @@ public class Teste {
 //        }
         
         System.out.println("Tempo de Execução: " + tempoDeExecucao);
+        
 }
  
-}
+} 
